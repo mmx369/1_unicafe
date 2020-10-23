@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 
 const Statistics = ({ good, neutral, bad, totalVotes }) => {
 
-  const average = good * 1 + bad * -1 / totalVotes
-  const positive = good / totalVotes * 100
+  const average = (good * 1 + bad * -1 / totalVotes).toFixed(2)
+  const positive = (good / totalVotes * 100).toFixed(2)
 
   return (
     <table>
